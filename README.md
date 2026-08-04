@@ -49,6 +49,6 @@ Xây dựng mô hình dự báo xác suất khách hàng vỡ nợ (default) t�
 - Mô hình cuối chỉ sử dụng 4 biến; có thể thử nghiệm thêm các tổ hợp biến khác dựa trên IV/VIF hoặc các phương pháp lựa chọn đặc trưng khác.
 - Ngưỡng cutoff hiện chọn theo Youden's J (tối ưu thống kê); khi triển khai thực tế nên kết hợp thêm mục tiêu kinh doanh (tỷ lệ phê duyệt mong muốn, khẩu vị rủi ro, chi phí sai phân loại theo cost matrix ở trên).
 
-## 7. Công cụ sử dụng
+## 5. Công cụ sử dụng
 
 Python, pandas, numpy, scikit-learn, statsmodels, matplotlib, seaborn.
