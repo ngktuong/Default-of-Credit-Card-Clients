@@ -43,25 +43,7 @@ Xây dựng mô hình dự báo xác suất khách hàng vỡ nợ (default) t�
 - **Biến được chọn vào mô hình cuối:** `duration`, `credit_history`, `checking_account`, `savings_account` (dạng WOE).
 - **Ngưỡng cutoff:** xác định bằng Youden's J, tương ứng khoảng 505 điểm scorecard (Base Score = 600, PDO = 20).
 
-## 4. Cấu trúc thư mục
-
-```
-├── notebook_updated.ipynb   # Notebook chính: toàn bộ pipeline
-├── german.doc                # Mô tả gốc bộ dữ liệu (UCI)
-├── data/
-│   └── german.data           # Dữ liệu gốc (tự tải từ UCI, không kèm trong repo)
-├── requirements.txt
-└── README.md
-```
-
-## 5. Cách chạy
-
-```bash
-pip install -r requirements.txt
-jupyter notebook notebook_updated.ipynb
-```
-
-## 6. Hạn chế và hướng cải thiện
+## 4. Hạn chế và hướng cải thiện
 
 - Việc chia bin (binning) hiện thực hiện thủ công dựa trên phân phối dữ liệu và giá trị WOE; có thể thử các phương pháp binning tối ưu tự động (ví dụ OptBinning) để so sánh.
 - Mô hình cuối chỉ sử dụng 4 biến; có thể thử nghiệm thêm các tổ hợp biến khác dựa trên IV/VIF hoặc các phương pháp lựa chọn đặc trưng khác.
