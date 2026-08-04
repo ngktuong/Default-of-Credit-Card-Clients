@@ -20,7 +20,7 @@ Xây dựng mô hình dự báo xác suất khách hàng vỡ nợ (default) t�
 2. **EDA:** khảo sát phân phối biến số/phân loại, kiểm tra outlier, tỷ lệ default theo từng nhóm, ma trận tương quan.
 3. **Chia dữ liệu:** train/test theo tỷ lệ 70/30, stratify theo `target`.
 4. **WOE / IV:** thử nhiều cách chia bin cho từng biến, tính WOE/IV, gom nhóm các mức có WOE gần nhau để tăng ổn định.
-5. **Chọn biến:** dựa trên IV (0.02–0.5), tránh biến có IV quá cao (nghi ngờ leakage) hoặc quá thấp (kém dự báo). WOE được tính **trên tập train** và áp dụng lại cho tập test để tránh rò rỉ dữ liệu.
+5. **Chọn biến:** dựa trên IV (0.1–0.5), tránh biến có IV quá cao (nghi ngờ leakage) hoặc quá thấp (kém dự báo). WOE được tính **trên tập train** và áp dụng lại cho tập test để tránh rò rỉ dữ liệu.
 6. **Kiểm định chéo (Stratified 5-fold CV):** đánh giá độ ổn định của bộ biến đã chọn, WOE được tính lại độc lập trong từng fold.
 7. **Kiểm tra đa cộng tuyến (VIF)** giữa các biến WOE trước khi huấn luyện mô hình cuối.
 8. **Logistic Regression** trên các biến WOE đã chọn.
